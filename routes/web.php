@@ -24,3 +24,9 @@ Route::resource('laporan', LaporanController::class);
 Route::view('tampilan', 'template.template');
 
 require __DIR__.'/auth.php';
+
+
+
+
+// Route Aplikasi
+Route::resource('laporan', LaporanController::class);
