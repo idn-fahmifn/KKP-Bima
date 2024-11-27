@@ -21,6 +21,7 @@ return new class extends Migration
             $table->date('tanggal_laporan');
             $table->date('tanggal_update');
             $table->text('keterangan');
+            $table->string('slug');
             $table->timestamps();
         });
     }

@@ -2,7 +2,7 @@
 
 
 @section('page-title')
-Halaman Pengaduan
+Pengaduan Masuk
 @endsection
 
 @section('content')
