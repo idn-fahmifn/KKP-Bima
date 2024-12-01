@@ -36,7 +36,7 @@ class LaporanController extends Controller
      */
     public function show(Laporan $laporan)
     {
-        //
+        return $laporan;
     }
 
     /**

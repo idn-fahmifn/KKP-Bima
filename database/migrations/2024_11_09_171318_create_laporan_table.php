@@ -15,13 +15,13 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('id_user');
             $table->string('judul_laporan');
-            $table->enum('jenis_laporan', ['kehilangan', 'kerusakan']);
+            $table->enum('jenis_laporan', ['perlu perbaikan', 'perlu pengadaan']);
             $table->enum('status', ['diajukan', 'diproses', 'selesai', 'ditolak'])->default('diajukan');
             $table->string('dokumentasi');
             $table->date('tanggal_laporan');
             $table->date('tanggal_update');
             $table->text('keterangan');
-            $table->string('slug');
+            $table->string('slug')->unique();
             $table->timestamps();
         });
     }

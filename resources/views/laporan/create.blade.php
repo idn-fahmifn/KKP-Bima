@@ -33,7 +33,7 @@ Buat Pengaduan
                                 </select>
                             </div>
 
-                            <div class="col-12 mb-4 border p-4 mt-4">
+                            <!-- <div class="col-12 mb-4 border p-4 mt-4">
                                 <label class="form-label">Masukan Dokumentasi</label>
                                 <div class="upload-image-wrapper d-flex align-items-center gap-3 flex-wrap">
                                     <div class="uploaded-imgs-container d-flex gap-3 flex-wrap"></div>
@@ -42,6 +42,27 @@ Buat Pengaduan
                                         <span class="fw-semibold text-secondary-light">Unggah</span>
                                         <input id="upload-file-multiple" type="file" hidden multiple>
                                     </label>
+                                </div>
+                            </div> -->
+
+                            <div class="col-md-6">
+                                <div class="card h-100 p-0">
+                                    <div class="card-header border-bottom bg-base py-16 px-24">
+                                        <h6 class="text-lg fw-semibold mb-0">Upload With image preview</h6>
+                                    </div>
+                                    <div class="card-body p-24">
+
+                                        <div class="upload-image-wrapper d-flex align-items-center gap-3 flex-wrap">
+                                            <div class="uploaded-imgs-container d-flex gap-3 flex-wrap"></div>
+
+                                            <label class="upload-file-multiple h-120-px w-120-px border input-form-light radius-8 overflow-hidden border-dashed bg-neutral-50 bg-hover-neutral-200 d-flex align-items-center flex-column justify-content-center gap-1" for="upload-file-multiple">
+                                                <iconify-icon icon="solar:camera-outline" class="text-xl text-secondary-light"></iconify-icon>
+                                                <span class="fw-semibold text-secondary-light">Upload</span>
+                                                <input id="upload-file-multiple" type="file" hidden multiple>
+                                            </label>
+                                        </div>
+
+                                    </div>
                                 </div>
                             </div>
 
