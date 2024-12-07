@@ -14,13 +14,14 @@ class PengaduanController extends Controller
         return view('laporan.semua', compact('data'));
     }
 
-    public function masuk()
+    public function pending()
     {
-        return view('laporan.masuk');
+        return view('laporan.pending');
     }
     public function detail(Laporan $laporan)
     {
-        return $laporan;
+        $data = $laporan;
+        return view('laporan.detail', compact('data'));
     }
          
 }

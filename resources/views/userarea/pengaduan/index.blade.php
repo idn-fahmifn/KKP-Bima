@@ -10,7 +10,7 @@ Halaman Pengaduan
 <div class="dashboard-main-body">
     <div class="card basic-data-table">
         <div class="card-header">
-            <h5 class="card-title mb-0">Pengaduan Masuk</h5>
+            <h5 class="card-title mb-0">Pengaduan saya</h5>
         </div>
         <div class="card-body">
             <table class="table bordered-table mb-0" id="dataTable" data-page-length='10'>
@@ -28,21 +28,22 @@ Halaman Pengaduan
                         <td>{{$item->judul_laporan}}</td>
                         <td>{{$item->tanggal_laporan}}</td>
                         <td>
-                            @if ($item->status == 'diajukan')
-                            <span class="badge text-sm fw-semibold bg-light-100 px-20 py-9 radius-4 text-secondary-light">diajukan</span>
-                            @elseif($item->status == 'diproses')
-                                <i class="ri-circle-fill circle-icon text-secondary-main w-auto"></i> diproses
+                            @if ($item->status === 'diajukan')
+                            <span class="text-white bg-neutral-400 border border-neutral-400 radius-4 px-4 py-4 text-sm line-height-1 fw-medium">pending</span>
+                            @elseif ($item->status === 'diproses')
+                            <span class="text-white bg-primary-400 border border-primary-400 radius-4 px-4 py-4 text-sm line-height-1 fw-medium">diproses</span>
+                            @elseif($item->status === 'diproses')
+                            <span class="text-white bg-success-400 border border-success-400 radius-4 px-4 py-4 text-sm line-height-1 fw-medium">selesai</span>
+                            @else
+                            <span class="text-white bg-danger-400 border border-danger-400 radius-4 px-4 py-4 text-sm line-height-1 fw-medium">selesai</span>
                             @endif
                         </td>
                         <td>
-                            <a href="javascript:void(0)"
+                            <a href="{{route('myreport.detail', $item->slug)}}"
                                 class="w-32-px h-32-px bg-primary-light text-primary-600 rounded-circle d-inline-flex align-items-center justify-content-center">
                                 <iconify-icon icon="iconamoon:eye-light"></iconify-icon>
                             </a>
-                            <a href="javascript:void(0)"
-                                class="w-32-px h-32-px bg-success-focus text-success-main rounded-circle d-inline-flex align-items-center justify-content-center">
-                                <iconify-icon icon="lucide:edit"></iconify-icon>
-                            </a>
+
                             <a href="javascript:void(0)"
                                 class="w-32-px h-32-px bg-danger-focus text-danger-main rounded-circle d-inline-flex align-items-center justify-content-center">
                                 <iconify-icon icon="mingcute:delete-2-line"></iconify-icon>

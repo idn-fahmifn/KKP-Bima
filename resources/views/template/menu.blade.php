@@ -5,9 +5,9 @@
     </button>
     <div>
         <a href="index.html" class="sidebar-logo">
-            <img src="{{asset('assets/images/logo-biru.png')}}" alt="site logo" class="light-logo img-fluid">
-            <img src="{{asset('assets/images/logo-putih.png')}}" alt="site logo" class="dark-logo img-fluid">
-            <img src="{{asset('assets/images/logo-biru.png')}}" alt="site logo" class="logo-icon img-fluid">
+            <img src="{{asset('assets/images/idn-blue.png')}}" alt="site logo" class="light-logo img-fluid">
+            <img src="{{asset('assets/images/idn-white.png')}}" alt="site logo" class="dark-logo img-fluid">
+            <img src="{{asset('assets/images/idn-blue.png')}}" alt="site logo" class="logo-icon img-fluid">
         </a>
     </div>
     <div class="sidebar-menu-area">
@@ -28,25 +28,28 @@
             <li class="dropdown">
                 <a href="javascript:void(0)">
                     <iconify-icon icon="hugeicons:invoice-03" class="menu-icon"></iconify-icon>
-                    <span>Laporan Pengaduan</span>
+                    <span>Pengaduan</span>
                 </a>
                 <ul class="sidebar-submenu">
                     <li>
-                        <a href="https://youtube.com"><i class="ri-circle-fill circle-icon text-secondary-main w-auto"></i> Semua Pengaduan</a>
+                        <a href="{{route('pengaduan.semua')}}"><i class="ri-circle-fill circle-icon text-secondary-main w-auto"></i> Semua</a>
                     </li>
                     <li>
-                        <a href="https://youtube.com"><i class="ri-circle-fill circle-icon text-info-600 w-auto"></i> Pengaduan Masuk</a>
+                        <a href="{{route('pengaduan.pending')}}"><i class="ri-circle-fill circle-icon text-info-600 w-auto"></i> Pending</a>
                     </li>
                     <li>
-                        <a href="https://youtube.com"><i class="ri-circle-fill circle-icon text-warning-main w-auto"></i> Pengaduan Diproses </a>
+                        <a href="{{route('pengaduan.diproses')}}"><i class="ri-circle-fill circle-icon text-warning-main w-auto"></i> Diproses </a>
                     </li>
                     <li>
-                        <a href="https://youtube.com"><i class="ri-circle-fill circle-icon text-info-main w-auto"></i> Tanggapan Pengaduan</a>
-                    </li>
-                    <li>
-                        <a href="https://youtube.com"><i class="ri-circle-fill circle-icon text-success-main w-auto"></i> Pengaduan Selesai</a>
+                        <a href="https://youtube.com"><i class="ri-circle-fill circle-icon text-success-main w-auto"></i> Selesai</a>
                     </li>
                 </ul>
+            </li>
+            <li>
+                <a href="{{route('tanggapan.index')}}">
+                    <iconify-icon icon="mage:email" class="menu-icon"></iconify-icon>
+                    <span>Tanggapan</span>
+                </a>
             </li>
             <li>
                 <a href="https://youtube.com">
@@ -71,9 +74,9 @@
     </button>
     <div>
         <a href="index.html" class="sidebar-logo">
-            <img src="{{asset('assets/images/logo-biru.png')}}" alt="site logo" class="light-logo img-fluid">
-            <img src="{{asset('assets/images/logo-putih.png')}}" alt="site logo" class="dark-logo img-fluid">
-            <img src="{{asset('assets/images/logo-biru.png')}}" alt="site logo" class="logo-icon img-fluid">
+            <img src="{{asset('assets/images/idn-blue.png')}}" alt="site logo" class="light-logo img-fluid">
+            <img src="{{asset('assets/images/idn-white.png')}}" alt="site logo" class="dark-logo img-fluid">
+            <img src="{{asset('assets/images/idn-blue.png')}}" alt="site logo" class="logo-icon img-fluid">
         </a>
     </div>
     <div class="sidebar-menu-area">
@@ -92,10 +95,10 @@
                 </a>
                 <ul class="sidebar-submenu">
                     <li>
-                        <a href="https://youtube.com"><i class="ri-circle-fill circle-icon text-secondary-main w-auto"></i> Ajukan Pengaduan</a>
+                        <a href="{{route('create.pengaduan')}}"><i class="ri-circle-fill circle-icon text-secondary-main w-auto"></i> Ajukan Pengaduan</a>
                     </li>
                     <li>
-                        <a href="https://youtube.com"><i class="ri-circle-fill circle-icon text-info-600 w-auto"></i> Pengaduan Saya</a>
+                        <a href="{{route('myreport')}}"><i class="ri-circle-fill circle-icon text-info-600 w-auto"></i> Pengaduan Saya</a>
                     </li>
                 </ul>
             </li>

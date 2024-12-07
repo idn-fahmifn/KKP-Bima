@@ -9,6 +9,13 @@ class Laporan extends Model
     protected $table = 'laporan';
     protected $guarded;
 
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'id_user');
+    }
+
+    
+
     public function getRouteKeyName()
     {
         return 'slug';

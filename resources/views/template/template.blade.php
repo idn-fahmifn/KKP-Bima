@@ -37,6 +37,8 @@
   <!-- main css -->
   <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
+
 
 
   <link href="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote.min.css" rel="stylesheet">
@@ -167,6 +169,9 @@
   <!-- main js -->
   <script src="{{asset('assets/js/app.js')}}"></script>
 
+
+
+
   <script src="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote.min.js"></script>
 
 
@@ -178,6 +183,29 @@
     $(document).ready(function() {
       $('#summernote').summernote();
     });
+  </script>
+
+  <script>
+
+    // =============================== Upload Single Image js start here ================================================
+    const fileInput = document.getElementById("upload-file");
+    const imagePreview = document.getElementById("uploaded-img__preview");
+    const uploadedImgContainer = document.querySelector(".uploaded-img");
+    const removeButton = document.querySelector(".uploaded-img__remove");
+
+    fileInput.addEventListener("change", (e) => {
+      if (e.target.files.length) {
+        const src = URL.createObjectURL(e.target.files[0]);
+        imagePreview.src = src;
+        uploadedImgContainer.classList.remove('d-none');
+      }
+    });
+    removeButton.addEventListener("click", () => {
+      imagePreview.src = "";
+      uploadedImgContainer.classList.add('d-none');
+      fileInput.value = "";
+    });
+    // =============================== Upload Single Image js End here ================================================
   </script>
 
 

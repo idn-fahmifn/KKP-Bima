@@ -22,6 +22,9 @@ return new class extends Migration
             $table->date('tanggal_update');
             $table->text('keterangan');
             $table->string('slug')->unique();
+
+            // menentukan foreign
+            $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }
