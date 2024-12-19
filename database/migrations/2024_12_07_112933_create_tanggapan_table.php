@@ -16,7 +16,6 @@ return new class extends Migration
             $table->unsignedBigInteger('id_laporan');
             $table->text('keterangan');
             $table->string('dokumentasi')->nullable();
-            $table->date('update');
 
             $table->foreign('id_laporan')->on('laporan')->references('id')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();

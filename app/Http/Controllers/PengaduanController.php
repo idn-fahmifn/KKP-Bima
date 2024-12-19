@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Laporan;
 
+use App\Models\Tanggapan;
 use Illuminate\Http\Request;
 
 class PengaduanController extends Controller
@@ -20,8 +21,11 @@ class PengaduanController extends Controller
     }
     public function detail(Laporan $laporan)
     {
+        
+
         $data = $laporan;
-        return view('laporan.detail', compact('data'));
+        $pengaduan = Tanggapan::where('id_laporan', $laporan->id)->get();
+        return view('laporan.detail', compact('data', 'pengaduan'));
     }
          
 }

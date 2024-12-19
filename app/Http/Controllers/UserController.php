@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Laporan;
+use App\Models\Tanggapan;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -14,7 +15,15 @@ class UserController extends Controller
 {
     public function index()
     {
-        return view('userarea.dashboard');
+        // Carbon indonesia
+
+        Carbon::setLocale('id');
+
+        $indo = Carbon::now()->isoFormat('dddd, D MMMM YYYY');
+
+
+
+    return view('userarea.dashboard', compact('indo'));
     }
 
     public function pengaduanSaya()
@@ -52,7 +61,8 @@ class UserController extends Controller
     public function detail(Laporan $laporan)
     {
         $data = $laporan;
-        return view('userarea.pengaduan.detail', compact('data'));
+        $tanggapan = Tanggapan::where('id_laporan', $laporan->id)->get()->all();
+        return view('userarea.pengaduan.detail', compact('data', 'tanggapan'));
     }
 
     public function updatePengaduan(Request $request, $id)

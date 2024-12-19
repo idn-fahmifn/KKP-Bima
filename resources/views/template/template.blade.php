@@ -75,13 +75,10 @@
               <div class="dropdown-menu to-top dropdown-menu-sm">
                 <div class="py-12 px-16 radius-8 bg-primary-50 mb-16 d-flex align-items-center justify-content-between gap-2">
                   <div>
-
-                    @if (Auth::check())
-
-                    <h6 class="text-lg text-primary-light fw-semibold mb-2">{{Auth::user()->name}}</h6>
+                    @if(Auth::check())
+                      <h6 class="text-lg text-primary-light fw-semibold mb-2">{{Auth::user()->name}}</h6>
+                    @endif
                   </div>
-
-                  @endif
                   <button type="button" class="hover-text-danger">
                     <iconify-icon icon="radix-icons:cross-1" class="icon text-xl"></iconify-icon>
                   </button>
@@ -186,7 +183,6 @@
   </script>
 
   <script>
-
     // =============================== Upload Single Image js start here ================================================
     const fileInput = document.getElementById("upload-file");
     const imagePreview = document.getElementById("uploaded-img__preview");

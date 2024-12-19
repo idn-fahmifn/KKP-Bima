@@ -46,6 +46,7 @@ Dashboard
         </div>
       </div><!-- card end -->
     </div>
+
     <div class="col">
       <div class="card shadow-none border bg-gradient-start-3 h-100">
         <div class="card-body p-20">
@@ -60,7 +61,7 @@ Dashboard
           </div>
           <p class="fw-medium text-sm text-primary-light mt-12 mb-0 d-flex align-items-center gap-2">
             <span class="d-inline-flex align-items-center gap-1 text-success-main"><iconify-icon icon="bxs:up-arrow" class="text-xs"></iconify-icon> +200</span>
-            Last 30 days users
+            {{$indo}}
           </p>
         </div>
       </div><!-- card end -->

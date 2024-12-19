@@ -1,13 +1,13 @@
-@if (Auth::user()->isAdmin)
+@if (Auth::check() && Auth::user()->isAdmin)
 <aside class="sidebar">
     <button type="button" class="sidebar-close-btn">
         <iconify-icon icon="radix-icons:cross-2"></iconify-icon>
     </button>
     <div>
         <a href="index.html" class="sidebar-logo">
-            <img src="{{asset('assets/images/idn-blue.png')}}" alt="site logo" class="light-logo img-fluid">
-            <img src="{{asset('assets/images/idn-white.png')}}" alt="site logo" class="dark-logo img-fluid">
-            <img src="{{asset('assets/images/idn-blue.png')}}" alt="site logo" class="logo-icon img-fluid">
+        <img src="https://www.idn.id/storage/2022/11/LOGO-ID-Networkers-IDN.ID_.png" alt="site logo" class="light-logo img-fluid">
+            <img src="https://www.idn.id/storage/2022/11/LOGO-ID-Networkers-IDN.ID_.png" alt="site logo" class="dark-logo img-fluid">
+            <img src="https://www.idn.id/storage/2022/11/LOGO-ID-Networkers-IDN.ID_.png" alt="site logo" class="logo-icon img-fluid">
         </a>
     </div>
     <div class="sidebar-menu-area">
@@ -74,9 +74,9 @@
     </button>
     <div>
         <a href="index.html" class="sidebar-logo">
-            <img src="{{asset('assets/images/idn-blue.png')}}" alt="site logo" class="light-logo img-fluid">
-            <img src="{{asset('assets/images/idn-white.png')}}" alt="site logo" class="dark-logo img-fluid">
-            <img src="{{asset('assets/images/idn-blue.png')}}" alt="site logo" class="logo-icon img-fluid">
+            <img src="https://www.idn.id/storage/2022/11/LOGO-ID-Networkers-IDN.ID_.png" alt="site logo" class="light-logo img-fluid">
+            <img src="https://www.idn.id/storage/2022/11/LOGO-ID-Networkers-IDN.ID_.png" alt="site logo" class="dark-logo img-fluid">
+            <img src="https://www.idn.id/storage/2022/11/LOGO-ID-Networkers-IDN.ID_.png" alt="site logo" class="logo-icon img-fluid">
         </a>
     </div>
     <div class="sidebar-menu-area">
